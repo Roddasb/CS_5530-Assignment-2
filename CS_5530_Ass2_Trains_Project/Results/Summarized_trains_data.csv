@@ -1,0 +1,12 @@
+Location_City,Total_Cars,Average_Kilometers,Average_Price,Oldest_Car_Year,Newest_Car_Year,Oldest_Car_Status
+Ahmedabad,217,54951.52,8.59,2002,2019,Recent
+Bangalore,347,58172.25,13.64,2002,2018,Recent
+Chennai,474,90564.88,7.96,2001,2019,Recent
+Coimbatore,629,46906.34,15.14,2004,2019,Recent
+Delhi,535,57099.69,9.91,2006,2019,Recent
+Hyderabad,709,70680.36,10.0,2000,2019,Recent
+Jaipur,400,70614.46,5.95,1998,2019,Old
+Kochi,637,44695.48,11.32,2003,2019,Recent
+Kolkata,521,43499.69,5.74,2000,2019,Recent
+Mumbai,757,44551.67,9.57,1998,2019,Old
+Pune,581,69749.08,6.99,1999,2019,Old
