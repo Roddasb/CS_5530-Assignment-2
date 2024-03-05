@@ -1,4 +1,4 @@
-## This is for Question e e) Perform select, filter, rename, mutate, arrange ## and summarize with group by operations (or their equivalent operations in python) ##on this dataset. (4 points)  
+## Question D
 
 
 import pandas as pd
@@ -16,19 +16,26 @@ data['Car_Age'] = pd.Timestamp.now().year - data['Year']
 # Step 3: Arrange the data by the year of manufacture (Year) in descending order
 data = data.sort_values(by='Year', ascending=False)
 
-# Step 4: Summarize - Group by Location and summarize the data
+# Step 4: Select specific columns
+selected_cols = ['Location_City', 'No.', 'Kilometers_Driven', 'Price_Lakh', 'Year']
+data = data[selected_cols]
+
+# Step 5: Filter rows where 'Price_Lakh' is not null
+data = data[data['Price_Lakh'].notnull()]
+
+# Step 6: Group by Location and summarize the data
 summary_data = data.groupby('Location_City').agg(
-    Total_Cars=('ID', 'count'),
+    Total_Cars=('No.', 'count'),
     Average_Kilometers=('Kilometers_Driven', 'mean'),
-    Average_Price=('Price', 'mean'),
+    Average_Price_Lakh=('Price_Lakh', 'mean'),
     Oldest_Car_Year=('Year', 'min'),
     Newest_Car_Year=('Year', 'max')
 ).reset_index()
 
-# Add a new column Oldest_Car_Status based on the condition
+# Step 7: Add a new column Oldest_Car_Status based on the condition
 summary_data['Oldest_Car_Status'] = np.where(summary_data['Oldest_Car_Year'] < 2000, 'Old', 'Recent')
 
-# Round the numeric columns to 2 decimal places
+# Step 8: Round the numeric columns to 2 decimal places
 summary_data = summary_data.round({'Average_Kilometers': 2, 'Average_Price': 2})
 
 # Write the summarized data to a new CSV file

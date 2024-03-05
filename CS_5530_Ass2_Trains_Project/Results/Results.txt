@@ -1,0 +1,53 @@
+Number of missing values in each column:
+No.                     0
+Name                    0
+Location                0
+Year                    0
+Kilometers_Driven       0
+Fuel_Type               0
+Transmission            0
+Owner_Type              0
+Mileage_kms             2
+Engine_cc              36
+Power_bhp              36
+Seats                  38
+New_Price            5032
+Price_Lakh              0
+dtype: int64
+   No.                              Name    Location  Year  Kilometers_Driven  \
+0    1  Hyundai Creta 1.6 CRDi SX Option        Pune  2015              41000   
+1    2                      Honda Jazz V     Chennai  2011              46000   
+2    3                 Maruti Ertiga VDI     Chennai  2012              87000   
+3    4   Audi A4 New 2.0 TDI Multitronic  Coimbatore  2013              40670   
+4    6            Nissan Micra Diesel XV      Jaipur  2013              86999   
+
+   Fuel_Type  Transmission Owner_Type  Mileage_kms  Engine_cc  Power_bhp  \
+0          1             0      First        19.67     1582.0     126.20   
+1          0             0      First        13.00     1199.0      88.70   
+2          1             0      First        20.77     1248.0      88.76   
+3          1             1     Second        15.20     1968.0     140.80   
+4          1             0      First        23.08     1461.0      63.10   
+
+   Seats  Price_Lakh  Car_Age  
+0    5.0       12.50        9  
+1    5.0        4.50       13  
+2    7.0        6.00       12  
+3    5.0       17.74       11  
+4    5.0        3.50       11  
+
+
+
+
+  Location_City  Total_Cars  Average_Kilometers  Average_Price_Lakh  \
+0     Ahmedabad         218            54974.70            8.567248   
+1     Bangalore         352            58227.86           13.482670   
+2       Chennai         475            90580.12            7.947726   
+3    Coimbatore         631            46949.78           15.160206   
+4         Delhi         540            57185.81            9.881944   
+
+   Oldest_Car_Year  Newest_Car_Year Oldest_Car_Status  
+0             2002             2019            Recent  
+1             2002             2018            Recent  
+2             2001             2019            Recent  
+3             2004             2019            Recent  
+4             2006             2019            Recent  
